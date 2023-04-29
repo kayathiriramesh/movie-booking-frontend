@@ -19,7 +19,7 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   let getData = async()=>{
-    let respon = await axios.get(`${BASE_URL}movies`)
+    let respon = await axios.get(`${BASE_URL}/movies`)
     setMovies(respon.data)
     
   }
@@ -36,6 +36,7 @@ function App() {
         <Route path='/tickets' element={<MyTickets/>}/>
       </Route>
     </Routes>
+
   </Router>
   </>
 }
